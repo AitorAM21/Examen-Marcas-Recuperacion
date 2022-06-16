@@ -17,7 +17,7 @@
                 </div>
                 <p class="display-4">Ultimas peliculas</p>
                 <% for (var i = 0; i < movies.length; i++) { %>
-                    <div class="card">
+                    <a class="card" href="/movies/<%=movies[i].id %> ">
                         <!-- Cover -->
                         <div class="card__cover">
                             <td><%= movies[i].poster_path %></td>
@@ -26,15 +26,11 @@
                         <!-- Content -->
                         <div class="card__content">
                             <td><%= movies[i].title %></td>
+                            <td><%= movies[i].id %></td>
                         </div>
-                        <td><%= movies[i].id %></td>
-                    </div>
-                     <% } %>
-                                    
-                                   
-                    
-
-
+                        
+                    </a>
+                    <% } %>
 
 </body>
 </html>
