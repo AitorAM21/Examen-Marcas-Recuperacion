@@ -16,12 +16,24 @@
                     <i class="fa fa-dashboard"></i>Portada
                 </div>
                 <p class="display-4">Ultimas peliculas</p>
-                
-                
-                </p>
-            </div> <!-- /#admin-main-control -->
-        </div> <!-- /.row -->
-    </div> <!-- /.container-fluid -->
+                <% for (var i = 0; i < movies.length; i++) { %>
+                    <div class="card">
+                        <!-- Cover -->
+                        <div class="card__cover">
+                            <td><%= movies[i].poster_path %></td>
+                        </div>
+                    
+                        <!-- Content -->
+                        <div class="card__content">
+                            <td><%= movies[i].title %></td>
+                        </div>
+                        <td><%= movies[i].id %></td>
+                    </div>
+                     <% } %>
+                                    
+                                   
+                    
+
 
 
 </body>
